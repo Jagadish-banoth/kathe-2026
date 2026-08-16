@@ -91,6 +91,27 @@ LoRA**.
 Instead of updating the complete NLLB-200 model, LoRA adapters were attached to
 selected attention projection layers.
 
+======================================
+
+The trained LoRA adapter is hosted on Hugging Face:
+
+**`JagadishBanoth/nllb-en-kas-lora`**
+
+The inference scripts automatically download the adapter from Hugging Face.
+
+---
+
+## Repository Structure
+
+
+kathe-2026/
+│
+├── README.md
+├── requirements.txt
+├── load_model.py
+├── inference.py
+└── batch_inference.py
+
 ### Training Configuration
 
 ```text
@@ -118,9 +139,4 @@ LoRA dropout:
 Target modules:
 q_proj, v_proj
 
-Effective batch size:
-16
 
-FP16:
-Enabled
-```
